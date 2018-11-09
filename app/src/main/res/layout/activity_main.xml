@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+  <EditText
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/Item"
+      android:hint="Enter the item name"
+      android:layout_marginLeft="40dp"
+      android:layout_marginTop="40dp"
+      />
+
+  <Spinner
+      android:id="@+id/quantity"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toRightOf="@id/Item"
+      android:layout_marginLeft="40dp"
+      android:layout_marginTop="40dp"
+      android:entries="@array/quantity_arrays"
+      android:prompt="@string/quantity_prompt"
+       />
+
+
+  <EditText
+      android:id="@+id/Price"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_toRightOf="@id/category"
+      android:layout_below="@id/quantity"
+      android:layout_marginLeft="40dp"
+      android:layout_marginTop="40dp"
+      android:hint="Price"
+
+      android:layout_alignRight="@id/quantity"
+       />
+
+
+  <Spinner
+      android:id="@+id/category"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/Item"
+      android:entries="@array/item_arrays"
+      android:prompt="@string/item_prompt"
+      android:layout_marginLeft="40dp"
+      android:layout_marginTop="40dp"
+      />
+
+  <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_below="@id/category"
+      android:checkedButton="@id/notimported"
+      android:id="@+id/radio"
+       >
+    <RadioButton android:id="@+id/imported"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Imported"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+       />
+    <RadioButton android:id="@+id/notimported"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Imported"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+
+       />
+
+  </RadioGroup>
+  <Button
+      android:id="@+id/CheckPrice"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="40dp"
+      android:layout_marginTop="40dp"
+      android:layout_below="@id/radio"
+      android:text="Check Price" />
+
+  <Button
+      android:id="@+id/Add"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="40dp"
+      android:layout_marginTop="40dp"
+      android:layout_below="@id/radio"
+      android:layout_toRightOf="@id/CheckPrice"
+      android:text="Add Item"
+      />
+
+
+  <Button
+      android:id="@+id/ViewBill"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="40dp"
+      android:layout_marginTop="40dp"
+      android:layout_below="@id/radio"
+      android:layout_toRightOf="@id/Add"
+      android:text="ViewBill"
+      android:onClick="secondclass"/>
+
+</RelativeLayout>

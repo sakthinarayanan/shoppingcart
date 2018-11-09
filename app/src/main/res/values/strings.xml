@@ -1,0 +1,23 @@
+<resources>
+
+<string name="app_name">mysalestax</string>
+<string name="item_prompt">Choose a country</string>
+    <string name="quantity_prompt">Choose a Quantity</string>
+<string-array name="item_arrays">
+    <item>Books</item>
+    <item>Cosmetics</item>
+    <item>Movies</item>
+    <item>Food</item>
+    <item>Medical</item>
+    <item>Chocolates</item>
+ </string-array>
+
+    <string-array name="quantity_arrays">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+</resources>
